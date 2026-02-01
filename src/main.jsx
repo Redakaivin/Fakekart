@@ -9,11 +9,11 @@ import Product from './Pages/Products.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ProductDetails from './Pages/ProductDetails.jsx'
 import Login from './Pages/Login.jsx'
-import ThemeProvider  from './Pages/ThemeContext.jsx'
-import CartProvider  from './Pages/CartContext.jsx'
+import ThemeProvider from './context/ThemeContext.jsx'
+import CartProvider from './context/CartContext.jsx'
 import Cart from './Pages/Cart.jsx'
 import Register from './Pages/Register.jsx'
-import UserProvider from './Pages/UserContext.jsx'
+import UserProvider from './context/UserContext.jsx'
 
 
 
@@ -23,7 +23,7 @@ let router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        index:true,
+        index: true,
         element: <Home />
       },
       {
@@ -35,39 +35,39 @@ let router = createBrowserRouter([
         element: <Product />
       },
 
-        {
+      {
         path: 'detail/:id',
         element: <ProductDetails />
       },
 
       {
         path: 'login',
-        element: <Login/>
+        element: <Login />
       },
       {
-      path: 'cart',
-      element: <Cart/>
+        path: 'cart',
+        element: <Cart />
       },
       {
-      path: 'register',
-      element:<Register/>
+        path: 'register',
+        element: <Register />
       }
     ]
   }
 ])
-  
+
 createRoot(document.getElementById('root')).render(
-<UserProvider>
+  <UserProvider>
 
-  <CartProvider>
+    <CartProvider>
 
-   <ThemeProvider>
+      <ThemeProvider>
 
-    <RouterProvider router={router} />
+        <RouterProvider router={router} />
 
-    </ThemeProvider>
+      </ThemeProvider>
 
-  </CartProvider>
+    </CartProvider>
 
-</UserProvider>
+  </UserProvider>
 )

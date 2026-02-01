@@ -1,0 +1,19 @@
+.register-page {
+    padding-top: 80px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.register-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.register-page h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: inherit;
+    opacity: 0.9;
+}
